@@ -42,7 +42,7 @@ const Banner = () => {
             <img
               src={vector1}
               alt="vector"
-              className="vector absolute bottom-30 left-[28rem] w-24 hidden lg:block"
+              className="vector absolute bottom-0 left-[28rem] w-24 hidden lg:block"
             />
           </div>
 
@@ -76,7 +76,7 @@ const Banner = () => {
       <img
         src={vector2}
         alt="vector"
-        className="vector absolute bottom-30 right-0 w-48 hidden lg:block"
+        className="vector absolute bottom-10 right-0 w-30 hidden lg:block z-0"
       />
     </section>
   );

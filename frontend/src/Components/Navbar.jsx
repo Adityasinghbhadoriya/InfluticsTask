@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../assets/img/logo.svg";
 import { Link } from "react-router-dom";
+import { HiMenu } from "react-icons/hi";
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -9,9 +10,8 @@ const Navbar = () => {
     <>
       {/* Sidebar (Mobile Menu) */}
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 transform transition-transform duration-300 ${
-          isSidebarOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 h-full w-72 bg-white shadow-lg z-50 transform transition-transform duration-300 ${isSidebarOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex justify-between items-center p-4 border-b border-gray-200">
           <a href="#">
@@ -139,7 +139,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <header className="fixed top-0 left-0 right-0 lg:left-20 lg:right-20 rounded-b-2xl flex justify-between items-center px- md:px-10 py-4 bg-white/30 backdrop-blur-lg  border-gray-200 z-40">
+      <header className="fixed top-0 left-0 right-0 lg:left-20 lg:right-20 rounded-b-2xl flex justify-between items-center px-5 md:px-10 py-4 bg-white/30 backdrop-blur-lg  border-gray-200 z-40">
         <a href="#">
           <img src={logo} alt="logo" className="w-32 md:w-40" />
         </a>
@@ -276,19 +276,19 @@ const Navbar = () => {
             Contact
           </Link>
 
-          <a
-            href="about.html"
+          <Link
+            to="/about"
             className="bg-gradient-to-r from-yellow-500 to-pink-500 text-white px-4 py-2 rounded-md flex items-center"
           >
-            Follow Me
-          </a>
+            + Follow Me
+          </Link>
         </nav>
 
         <button
           onClick={() => setIsSidebarOpen(true)}
-          className="lg:hidden bg-gradient-to-r from-yellow-500 to-pink-500 text-white px-3 py-2 rounded-md"
+          className="lg:hidden bg-gradient-to-r from-yellow-500 to-pink-500 text-white px-3 py-2 rounded-md flex items-center justify-center"
         >
-          <i className="flaticon-menu"></i>
+          <HiMenu className="w-6 h-6" />
         </button>
       </header>
     </>

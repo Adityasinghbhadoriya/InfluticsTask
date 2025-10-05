@@ -34,21 +34,24 @@ const StreamingVideos1_page = () => {
 
   return (
     <div className='w-full min-h-screen bg-white'>
-      <div className='flex gap-5 items-center justify-center pt-10 flex-wrap px-4 sm:px-6 lg:px-0'>
+      <div className='flex flex-wrap gap-3 justify-center pt-10 px-4 sm:px-6 lg:px-0'>
         {buttons.map((btn, i) => (
           <button
             key={i}
             onClick={() => handleButtonClick(i)}
-            className={`px-5 py-2 border border-red-400 rounded-lg cursor-pointer transition-all duration-300 
-              ${activeIndex === i
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 border border-red-400 rounded-lg cursor-pointer transition-all duration-300
+        ${activeIndex === i
                 ? "bg-gradient-to-r from-red-500 to-orange-400 text-white"
                 : "text-red-500 hover:bg-gradient-to-r hover:from-red-500 hover:to-orange-400 hover:text-white"
-              }`}
+              }
+        w-full sm:w-auto text-sm sm:text-base
+      `}
           >
             {btn}
           </button>
         ))}
       </div>
+
 
       <div className='flex items-center justify-center mt-10 sm:mt-12 px-4 sm:px-6 lg:px-0'>
         <div className='relative w-full sm:w-[90%] lg:w-[80vw] h-[50vh] sm:h-[60vh] lg:h-[75vh] bg-black rounded-xl overflow-hidden'>
@@ -77,7 +80,7 @@ const StreamingVideos1_page = () => {
 
       <div className='flex flex-wrap mt-10 bg-white p-4 sm:p-10 gap-5 justify-center'>
         {thumbnails.map((thumb, i) => (
-          <div key={i} className='relative h-[45vw] sm:h-[30vw] w-full sm:w-[39vw] max-w-[400px] bg-black rounded-xl overflow-hidden'>
+          <div key={i} className='relative h-[60vw] sm:h-[30vw] w-full sm:w-[39vw] max-w-[600px] bg-black rounded-xl overflow-hidden'>
             <img src={thumb} alt="" className='w-full h-full rounded-xl object-cover' />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent opacity-90"></div>
@@ -127,4 +130,3 @@ const StreamingVideos1_page = () => {
 }
 
 export default StreamingVideos1_page;
-  

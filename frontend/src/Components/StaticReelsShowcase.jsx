@@ -15,8 +15,8 @@ const StaticReelsShowcase = ({ reels }) => {
   const reelsToShow = reels || defaultReels;
 
   return (
-    <section className="py-6 px-4 lg:px-10 bg-white">
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+    <section className="py-6 lg:px-10 bg-white">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8 pl-5 w-[90vw] lg:w-[87vw] lg:pl-28">
         {reelsToShow.map((reel, index) => (
           <div key={index} className="flex flex-col items-center">
             <div

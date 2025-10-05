@@ -156,8 +156,6 @@ const BlogDetailPage = () => {
                 </div>
               </div>
             </div>
-
-            {/* Comments Section */}
             <div className="mt-[40px]">
               <h4 className="text-xl font-semibold mb-7">02 Comments</h4>
               {[1, 2].map((_, i) => (
@@ -170,7 +168,7 @@ const BlogDetailPage = () => {
                     src={`https://c.animaapp.com/mgdh5xbbIdGWBz/assets/user-${i + 5
                       }.png`}
                     alt="commenter"
-                    className="w-10 md:w-[120px] md:h-[120px] rounded-full"
+                    className="w-50 h-30 md:w-[120px] md:h-[120px] rounded-full"
                   />
                   <div className="pt-5">
                     <h5 className="text-[17px] font-medium mb-2">
@@ -190,8 +188,6 @@ const BlogDetailPage = () => {
                 </div>
               ))}
             </div>
-
-            {/* Leave Comment Form */}
             <div className="mt-[40px] border-t border-red-600/10 pt-[30px]">
               <h3 className="text-[21px] font-semibold mb-[25px]">
                 Leave a Comment
@@ -237,8 +233,6 @@ const BlogDetailPage = () => {
               </form>
             </div>
           </div>
-
-          {/* Right Sidebar */}
           <aside className="w-full md:w-1/3 lg:w-1/4 mt-6">
 
             <div className="bg-red-600/10 mb-4 p-5 rounded-xl">
@@ -256,8 +250,6 @@ const BlogDetailPage = () => {
                 </button>
               </form>
             </div>
-
-            {/* Categories */}
             <div className="bg-red-600/10 mb-4 p-5 rounded-xl">
               <h2 className="text-black text-lg font-bold mb-4 pb-1 relative before:content-[''] before:block before:w-[35px] before:h-0.5 before:bg-red-600 before:absolute before:bottom-0">
                 Categories
@@ -274,8 +266,6 @@ const BlogDetailPage = () => {
                 ))}
               </div>
             </div>
-
-            {/* Popular Posts */}
             <div className="bg-red-600/10 mb-4 p-5 rounded-xl">
               <h2 className="text-black text-lg font-bold mb-4 pb-1 relative before:content-[''] before:block before:w-[35px] before:h-0.5 before:bg-red-600 before:absolute before:bottom-0">
                 Popular Posts
@@ -307,8 +297,6 @@ const BlogDetailPage = () => {
                 ))}
               </div>
             </div>
-
-            {/* Tags */}
             <div className="bg-red-600/10 mb-4 p-5 rounded-xl">
               <h2 className="text-black text-lg font-bold mb-4 pb-1 relative before:content-[''] before:block before:w-[35px] before:h-0.5 before:bg-red-600 before:absolute before:bottom-0">
                 Tags

@@ -44,18 +44,19 @@ const StreamingVideos2_page = () => {
     }
 
     return (
-        <div className='w-full min-h-screen bg-white'>
-            <div className='flex gap-5 items-center justify-center pt-10 pb-7'>
+        <div className='w-full min-h-screen bg-white px-4 sm:px-6 lg:px-0'>
+            <div className='flex flex-wrap gap-3 justify-center pt-10 pb-7'>
                 {buttons.map((btn, i) => (
                     <button
                         key={i}
                         onClick={() => shuffleReels(i)}
                         className={`
-                            px-5 py-2 border rounded-lg cursor-pointer transition-all duration-300
+                            px-3 sm:px-5 py-2 sm:py-2.5 border rounded-lg cursor-pointer transition-all duration-300
                             ${activeButton === i 
                                 ? "bg-gradient-to-r from-red-500 to-orange-400 text-white border-red-500"
                                 : "border-red-400 text-red-500 hover:bg-gradient-to-r hover:from-red-500 hover:to-orange-400 hover:text-white"
                             }
+                            w-full sm:w-auto text-sm sm:text-base
                         `}
                     >
                         {btn}
@@ -64,32 +65,30 @@ const StreamingVideos2_page = () => {
             </div>
             <StaticReelsShowcase reels={firstReels} />
             <div className='flex items-center justify-center mt-5'>
-                <div className='relative w-[80vw] h-[64vh] bg-black rounded-3xl overflow-hidden'>
+                <div className='relative w-full sm:w-[90vw] md:w-[80vw] h-[40vh] sm:h-[50vh] md:h-[64vh] bg-black rounded-3xl overflow-hidden'>
                     <img
                         src={videoimg2}
                         alt="Main video"
                         className='rounded-xl w-full h-full object-cover transition-all duration-500'
                     />
-                    <div className='absolute top-1/2 left-1/2 z-10'>
+                    <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10'>
                         <button className="flex items-center justify-center">
-                            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
+                            <div className="w-16 sm:w-20 h-16 sm:h-20 bg-white rounded-full flex items-center justify-center shadow-lg">
                                 <div className="w-0 h-0 border-l-[16px] border-l-red-500 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent ml-1"></div>
                             </div>
                         </button>
                     </div>
                 </div>
             </div>
-
             <StaticReelsShowcase />
             <StaticReelsShowcase />
-
-            <div className="flex items-center justify-center gap-3 pb-20 pt-7">
+            <div className="flex flex-wrap items-center justify-center gap-3 pb-20 pt-7">
                 <img src={arrowicon} alt="Left Arrow" className="w-4 h-4 rotate-180 cursor-pointer" />
                 {[1, 2, 3, 4, 5].map((num, i) => (
                     <div
                         key={i}
                         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                        className={`w-10 h-10 flex items-center justify-center rounded-full border border-gray-300 cursor-pointer transition-colors duration-300
+                        className={`w-8 sm:w-10 h-8 sm:h-10 flex items-center justify-center rounded-full border border-gray-300 cursor-pointer transition-colors duration-300
                             ${i === 0
                                 ? "bg-red-500 text-white font-bold"
                                 : "bg-gray-200 text-black hover:bg-red-500 hover:text-white font-bold"

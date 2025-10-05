@@ -81,7 +81,7 @@ const IntroSection = () => {
             alt="Intro"
             className="w-full lg:w-[45vw] h-full object-cover rounded-t-[3rem] lg:rounded-l-full lg:rounded-tr-none lg:ml-auto"
           />
-          <button className="absolute top-1/2 left-1/2 lg:left-auto lg:right-10 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 bg-white w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full flex items-center justify-center shadow-lg">
+          <button className="absolute top-1/2 left-1/2 lg:left-10 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 bg-white w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28 rounded-full flex items-center justify-center shadow-lg">
             <div className="w-0 h-0 border-l-[14px] sm:border-l-[16px] border-l-red-600 border-t-[9px] border-t-transparent border-b-[9px] border-b-transparent ml-1"></div>
           </button>
         </div>
